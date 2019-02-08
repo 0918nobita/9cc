@@ -6,4 +6,4 @@ RUN pacman -Sy gcc binutils --noconfirm
 
 WORKDIR /root
 
-COPY ./test1.c ./test1.c
+COPY ./src /
