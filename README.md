@@ -4,23 +4,34 @@
 
 Docker を用いて構築した Arch linux の仮想環境で開発しています。
 
-### Docker イメージの作成
+### イメージの作成
 
 ```bash
-docker build -t 9cc .
+docker-compose build
 ```
 
-### Docker コンテナの起動
+### コンテナの起動 + ログイン (初回)
 
 ```bash
-docker run -i -t 9cc /bin/bash
+docker-compose run dev /bin/bash
 ```
 
-Control + P, Q でコンテナを起動したまま bash から抜けられます。  
-起動中のコンテナに再度ログインするには ``docker attach <コンテナID>`` を実行します。
+Control + P, Q でコンテナを起動したまま bash から抜けられます。
 
-### Docker コンテナの停止
+### 起動中のコンテナに再度ログインする
+
+```bash
+docker attach <コンテナID>
+```
+
+### コンテナの停止
 
 ```
 docker stop <コンテナID>
+```
+
+### コンテナの削除
+
+```bash
+docker rm <コンテナID>
 ```
