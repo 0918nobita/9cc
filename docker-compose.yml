@@ -5,3 +5,5 @@ services:
     build: './'
     volumes:
       - './src:/9cc'
+      - './ts:/9cc-ts'
+      - './ml:/9cc-ml'
