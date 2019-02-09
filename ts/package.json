@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc 9cc.ts"
+    "build": "tsc 9cc.ts",
+    "clean": "rm -f 9cc.js *.o *~ tmp*"
   },
   "devDependencies": {
     "@types/node": "^10.12.24",
