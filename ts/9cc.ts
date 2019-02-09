@@ -10,7 +10,7 @@ if (isFinite(integer) === false) {
 let asm = `.intel_syntax noprefix
 .global main
 main:
-  mov rax ${integer}
+  mov rax, ${integer}
   ret
 `;
 
