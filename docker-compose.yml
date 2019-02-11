@@ -5,5 +5,8 @@ services:
     build: './'
     volumes:
       - './src:/9cc'
-      - './ts:/9cc-ts'
       - './ml:/9cc-ml'
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
